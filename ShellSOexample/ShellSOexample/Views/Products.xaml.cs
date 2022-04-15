@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace ShellSOexample.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Tokyo : ContentPage
+    public partial class Products : ContentPage
     {
-        public Tokyo()
+        public Products()
         {
             InitializeComponent();
         }

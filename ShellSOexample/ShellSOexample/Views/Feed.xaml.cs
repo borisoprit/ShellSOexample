@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace ShellSOexample.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Paris : ContentPage
+    public partial class Feed : ContentPage
     {
-        public Paris()
+        public Feed()
         {
             InitializeComponent();
         }

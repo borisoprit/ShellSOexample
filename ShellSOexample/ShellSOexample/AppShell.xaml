@@ -28,7 +28,7 @@
             <Style BasedOn="{StaticResource BaseStyle}" TargetType="TabBar" />
             <Style BasedOn="{StaticResource BaseStyle}" TargetType="FlyoutItem" />
 
-         
+
             <Style Class="FlyoutItemLabelStyle" TargetType="Label">
                 <Setter Property="TextColor" Value="White" />
             </Style>
@@ -89,34 +89,60 @@
         <ShellContent Route="ItemsPage" ContentTemplate="{DataTemplate local:ItemsPage}" />
     </FlyoutItem>-->
 
-    <!--<ShellItem Route="Startpage" FlyoutItemIsVisible="False" >
-        <ShellContent ContentTemplate="{DataTemplate local:Page1}" Route="home"  />
-    </ShellItem>-->
+
 
     <ShellItem FlyoutItemIsVisible="True" Route="Startpage">
-        <ShellContent ContentTemplate="{DataTemplate local:Page1}" Route="home" />
+        <ShellContent ContentTemplate="{DataTemplate local:HomePage}" Route="home" />
     </ShellItem>
-    <FlyoutItem Title="Paris" >
 
-        <ShellContent ContentTemplate="{DataTemplate local:Paris}" Route="home" />
-    </FlyoutItem>
+    <FlyoutItem Title="Home">
 
-    <FlyoutItem Title="Tokyo" >
-
-    
-        <Tab Title="Tab1">
-
-            <ShellContent Title="Tab1" ContentTemplate="{DataTemplate local:Tokyo}" Route="Tokyo" />
-           
+        <Tab Title="Feed">
+            <ShellContent ContentTemplate="{DataTemplate local:Feed}" Route="Feed" />
         </Tab>
-        <Tab Title="Tab2">
-
-            <ShellContent Title="Tab 2" ContentTemplate="{DataTemplate local:Tokyo2}" Route="Tokyo2" />
+        <Tab Title="Products">
+            <ShellContent ContentTemplate="{DataTemplate local:Products}" Route="Products" />
+        </Tab>
+        <Tab Title="History">
+            <ShellContent ContentTemplate="{DataTemplate local:History}" Route="History" />
         </Tab>
     </FlyoutItem>
 
+    <FlyoutItem Title="School">
 
-    
+        <Tab Title="Courses">
+            <ShellContent ContentTemplate="{DataTemplate local:Courses}" Route="Courses" />
+        </Tab>
+    </FlyoutItem>
+
+    <Shell.FlyoutFooterTemplate>
+        <DataTemplate>
+            <Grid ColumnDefinitions="150, 150" RowDefinitions="30">
+                <Image
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Margin="50,0,0,0"
+                    HorizontalOptions="StartAndExpand"
+                    Source="Settings.png">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="TapGestureRecognizer_Tapped" />
+                    </Image.GestureRecognizers>
+
+                </Image>
+
+                <Image
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    Margin="0,0,30,0"
+                    HorizontalOptions="EndAndExpand"
+                    Source="Power.png">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="TapGestureRecognizer_Tapped_1" />
+                    </Image.GestureRecognizers>
+                </Image>
+            </Grid>
+        </DataTemplate>
+    </Shell.FlyoutFooterTemplate>
     <!--  When the Flyout is visible this will be a menu item you can tie a click behavior to  -->
     <!--<MenuItem Text="Paris"  Clicked="MenuItem_Clicked"/>
     <MenuItem Text="Support" IconImageSource="Feed.png" Clicked="OnMenuItemClicked"/>-->

@@ -1,11 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ShellSOexample.Views.Page1">
+             x:Class="ShellSOexample.Views.Courses">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome To Page1!"
-                   FontSize="Large"
+            <Label Text="Welcome to Courses"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
         </StackLayout>
